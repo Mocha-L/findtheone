@@ -2,7 +2,7 @@
 
 # [FindTheOne](http://honglingjin.online:520/)
 
-> FindTheOne 知乎红娘小站 是针对知乎大家公布的择偶标准，做的筛选网站（知乎不提供筛选功能好气啊）。在这里可以筛选自己的地域、性别、排序标准等。
+> FindTheOne 知乎红娘小站 是针对知乎大家公布的择偶标准，做的筛选网站（知乎不提供筛选功能好气啊）。在这里可以筛选自己的地域、性别、排序标准等。点击[http://honglingjin.online:520/](http://honglingjin.online:520/)去实例站点查看功能和使用。
 
 ## 使用教程
 
@@ -10,7 +10,7 @@
 
 ## 微信交流群
 
-![](https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg)  
+<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg" width="300px" />
 
 ## 开发
 
@@ -35,3 +35,6 @@ python src/web/model.py  # 执行初始化数据库
 python src/spider/find_the_people.py  # 执行爬虫程序爬取问题答案 也可以将该目录下的auto.sh加入计划任务，定时执行
 python src/web/view.py  # 开启网站，默认监听520端口（多浪漫~）
 ```
+### 打赏
+
+<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/ali.png" width="230px" /><img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wechat.png" width="230px" />
