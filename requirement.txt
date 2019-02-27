@@ -1,0 +1,15 @@
+certifi==2018.4.16
+chardet==3.0.4
+Click==7.0
+Flask==1.0.2
+Flask-SQLAlchemy==2.3.2
+idna==2.6
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+PyMySQL==0.9.3
+requests==2.18.4
+SQLAlchemy==1.2.15
+urllib3==1.22
+virtualenv==15.2.0
+Werkzeug==0.14.1

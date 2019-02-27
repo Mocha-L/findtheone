@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.zhihu.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <title>知乎红娘小站</title>
+</head>
+<body class="Entry-body">
+    <script src="/static/js/clickeffect.js" type="text/javascript"></script>
+
+    {% import "_macros.html" as macros %}
+    <div class="QuestionHeader" style="color:#aaa;text-align:center;min-width:100%;">
+        <br/>
+        <a href="/" style="color:#666666;font-size:30px;line-height: 88px;">知乎红娘小站</a>
+        <br/>
+        <p>浮世萬千，吾愛有三</p>
+        <p>日，月與卿</p>
+        <p>日為朝，月為暮，卿為朝朝暮暮</p>
+        <br/>
+        <br/>
+    </div>
+    <div class="Question-main" style="width:95%;padding:0;">
+        <div class="Question-mainColumn">
+            <div class="Card AnswerCard">
+                    <!--<div class="QuestionAnswer-content">-->
+                        <div class="List-item" style="padding: 8px 10px;">
+                            <div class="ContentItem AnswerItem">
+                                    <div class="AuthorInfo AnswerItem-authorInfo AnswerItem-authorInfo--related">
+                                        <div class="AuthorInfo-content" style="margin-left: 0px;">
+                                            <div class="AuthorInfo-head">
+                                                    <div class="Popover">
+                                                        <p style="font-color:#8590A6;font-size:12px;line-height:16px;">筛选条件：<b style="color:#ff0000">{{query_items.gender}}</b> <b>{{query_items.city}}</b></p>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <span class="Voters">
+                                            <button type="button" class="Button Button--plain">
+                                                <a href="/" style="color:#0000ff;font-size:12px;line-height:16px;">回到搜索页</a>
+                                            </button>
+                                        </span>
+                                    </div>
+                            </div>
+                        </div>
+                    <!--</div>-->
+            </div>
+            {% for item in results %}
+                <div class="Card AnswerCard">
+                    <div class="QuestionAnswer-content" style="padding:0;">
+                        <div class="List-item">
+                            <div class="ContentItem AnswerItem">
+                                <!--<div class="ContentItem-meta">-->
+                                    <div class="AuthorInfo AnswerItem-authorInfo AnswerItem-authorInfo--related">
+                                        <img class="Avatar AuthorInfo-avatar" width="38" height="38" src="{{ url_for('static', filename='img/avatar/{}'.format(item.AuthorAvatar)) }}">
+                                        <div class="AuthorInfo-content">
+                                            <div class="AuthorInfo-head">
+                                                <!--<span class="UserLink AuthorInfo-name">-->
+                                                    <div class="Popover">
+                                                        <div id="Popover35-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover35-content">
+                                                            <a target="_blank" class="UserLink-link" href="https://www.zhihu.com/people/{{ item.AuthUrlToken }}">{{ item.AuthorName }}</a>
+                                                        </div>
+                                                    </div>
+                                                <!--</span>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="AnswerItem-extraInfo" style="text-align:right;">
+                                            <span class="Voters">
+                                                <button type="button" class="Button Button--plain">
+                                                    {{ item.VoteupCount }}人赞同，{{ item.CommentCount }}人评论了该回答
+                                                </button>
+                                            </span>
+                                        </div>
+                                    <div class="RichContent RichContent--unescapable">
+                                        <div class="RichContent-inner">
+                                            {{ item.TotalContent | safe }}
+                                        </div>
+                                    </div>
+                                <br/>
+                                <p style="color:#aaa">作者更新于{{ item.UpdateTime | datetimeformat}}</p>
+                                <a target="_blank" style="margin:20px 0 20px auto;display: table;color:#0000FF" href="https://www.zhihu.com/question/{{ item.QuestionId }}/answer/{{ item.AnswerId }}">
+                                    <b>联系答主请点击跳转至知乎原回答</b>
+                                </a>
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if pagination %}
+            <div class="pagination" style="display:-webkit-box;">
+                {{ macros.pagination_widget(pagination, 'query_data') }}
+            </div>
+            {% endif %}
+            <div style="color:#ddd;display:block;margin:5px auto;text-align: -webkit-center;">
+                <p>作者：Leon</p>
+                <p>联系我：mocha_lee@qq.com</p>
+                <br/>
+                <ul style="color:#aaa;line-height:40px;">{{zan_words}}</ul>
+                <img width="180px" height="200px" src="/static/img/ali.png"/>
+                <img width="180px" height="200px" src="/static/img/wechat.png"/>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
