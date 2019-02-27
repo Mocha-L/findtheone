@@ -12,7 +12,9 @@
 
 ## 微信交流群
 
-<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg" width="300px" />
+有问题可进群交流或进群联系我。
+
+<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg" width="250px" />
 
 ## 开发
 
@@ -40,4 +42,5 @@ python src/web/view.py  # 开启网站，默认监听520端口（多浪漫~）
 ### 打赏
 
 觉得有用，请我一杯咖啡。
+
 <img src="https://github.com/Mocha-L/findtheone/blob/master/pic/ali.png" width="230px" /><img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wechat.png" width="230px" />
