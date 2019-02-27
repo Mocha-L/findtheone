@@ -1,6 +1,4 @@
-# FindTheOne 知乎红娘小站
-
-![](http://honglingjin.online:520/static/img/3.jpg)  
+![](https://github.com/Mocha-L/findtheone/blob/master/pic/findtheone.jpg)  
 
 # [FindTheOne](http://honglingjin.online:520/)
 
@@ -12,32 +10,28 @@
 
 ## 微信交流群
 
-
+![](https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg)  
 
 ## 开发
 
 本项目后端主要使用 `Python` + `Flask` ，前端使用 `zhihu`（就是照抄知乎的前端代码进行修改的），数据库是 `Mysql`
 
 ### 环境
-![](https://img.shields.io/badge/Python-3.6%2B-brightgreen.svg) ![](https://img.shields.io/badge/Flask%2B-brightgreen.svg) ![](https://img.shields.io/badge/Mysql-5.7%2B-brightgreen.svg)
+![](https://img.shields.io/badge/Python-3.6%2B-brightgreen.svg) ![](https://img.shields.io/badge/Flask-1.0.2%2B-brightgreen.svg) ![](https://img.shields.io/badge/Mysql-5.7%2B-brightgreen.svg)
 
-	Python 3.6.*
-  Mysql 5.7
-  Flask
+	Python 3.6.*    Mysql 5.7    Flask 1.0.2
 
-### 编译
+### 部署和运行
 
 ```
-git clone https://github.com/proxyee-down-org/proxyee-down.git
-cd proxyee-down/front
-#build html
-npm install
-npm run build
-cd ../main
-mvn clean package -Pprd
-```
+git clone https://github.com/Mocha-L/findtheone.git
 
-### 运行
-```
-java -jar proxyee-down-main.jar
+pip install -r requirement.txt
+
+python src/web/model.py  # 执行初始化数据库
+
+【重要】copy自己知乎的cookie和x-udid 加入find_the_people.py文件第21行和25行（访问知乎，F12就能看见）
+
+python src/spider/find_the_people.py  # 执行爬虫程序爬取问题答案 也可以将该目录下的auto.sh加入计划任务，定时执行
+python src/web/view.py  # 开启网站，默认监听520端口（多浪漫~）
 ```
