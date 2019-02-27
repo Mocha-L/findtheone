@@ -8,6 +8,8 @@
 
 [点击查看教程](https://www.zhihu.com/question/275359100/answer/540772904)
 
+欢迎各位开发者丰富和优化该项目，提交PR。
+
 ## 微信交流群
 
 <img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg" width="300px" />
@@ -37,4 +39,5 @@ python src/web/view.py  # 开启网站，默认监听520端口（多浪漫~）
 ```
 ### 打赏
 
+觉得有用，请我一杯咖啡。
 <img src="https://github.com/Mocha-L/findtheone/blob/master/pic/ali.png" width="230px" /><img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wechat.png" width="230px" />
