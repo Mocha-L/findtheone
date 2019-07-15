@@ -24,16 +24,16 @@
 
 ```
 public    公共文件目录
-spider    爬虫目录
+spider    爬虫目录 主要在里面的scrapy目录 其他的是demo文件
 static    网站静态文件
 templates 网站模板
 web       flask相关代码
 ```
 
 ### 环境
-![](https://img.shields.io/badge/Python-3.6%2B-brightgreen.svg) ![](https://img.shields.io/badge/Flask-1.0.2%2B-brightgreen.svg) ![](https://img.shields.io/badge/Mysql-5.7%2B-brightgreen.svg)
+![](https://img.shields.io/badge/Python-3.6%2B-brightgreen.svg) ![](https://img.shields.io/badge/Flask-1.0.2%2B-brightgreen.svg) ![](https://img.shields.io/badge/Mysql-5.7%2B-brightgreen.svg) ![](https://img.shields.io/badge/scrapy-1.6.0%2B-brightgreen.svg)
 
-	Python 3.6.*    Mysql 5.7    Flask 1.0.2
+	Python 3.6.*    Mysql 5.7    Flask 1.0.2    scrapy 1.6.0
 
 ### 部署和运行
 
