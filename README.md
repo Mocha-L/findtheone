@@ -10,11 +10,11 @@
 
 欢迎各位开发者丰富和优化该项目，提交PR。
 
-## 微信交流群
+## 微信
 
-有问题可进群交流或进群联系我。
+有问题可联系我。
 
-<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/wecha.jpg" width="250px" />
+<img src="https://github.com/Mocha-L/findtheone/blob/master/pic/myqr.jpg" width="250px" />
 
 ## 开发
 
@@ -44,9 +44,8 @@ pip install -r requirement.txt
 
 python src/web/model.py  # 执行初始化数据库
 
-【重要】copy自己知乎的cookie和x-udid 加入find_the_people.py文件第21行和25行（访问知乎，F12就能看见）
+# scrapy项目爬虫 需要自行部署 我用的是scrapyd部署和spiderkeeper定时任务
 
-python src/spider/find_the_people.py  # 执行爬虫程序爬取问题答案 也可以将该目录下的auto.sh加入计划任务，定时执行
 python src/web/view.py  # 开启网站，默认监听520端口（多浪漫~）
 ```
 ### 打赏
