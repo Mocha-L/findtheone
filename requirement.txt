@@ -5,7 +5,7 @@ Flask==1.0.2
 Flask-SQLAlchemy==2.3.2
 idna==2.6
 itsdangerous==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.1.0
 PyMySQL==0.9.3
 requests==2.18.4
